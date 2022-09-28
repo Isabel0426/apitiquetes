@@ -5,7 +5,7 @@ const userControll = require('../Controllers/cotroller1')
 const tiquetec = require('../Controllers/Controllertiquete')
 
 //login
-router.post(apiRoute+'/login',userControll.getlogin)
+router.get(apiRoute+'/login',userControll.getlogin)
 
 //registro
 router.post(apiRoute+'/registro',userControll.create)
