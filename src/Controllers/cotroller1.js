@@ -1,7 +1,7 @@
 const userControll = {};
 const login = require('../Models/login');
-const registron = require ('../Models/registro')
-const repository = require('../repositories/repository')
+const registron = require ('../Models/registro');
+const repository = require('../repositories/repository');
 
 
 userControll.getlogin = (req, res) => {
