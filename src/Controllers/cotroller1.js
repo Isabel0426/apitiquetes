@@ -1,5 +1,6 @@
 const userControll = {};
 const login = require('../Models/login');
+const registron = require ('../Models/registro')
 const repository = require('../repositories/repository')
 
 
@@ -22,16 +23,16 @@ userControll.getlogin = (req, res) => {
 userControll.create = (req, res) => {
     //capturar body request
     const newUser= req.body;
-    let users = new login(null,newUser.username,newUser.correo, newUser.contraseña)
+    let registro = new registron(null,newUser.username,newUser.correo, newUser.contraseña)
     //llamar metodo del repository y enviamos objeto modelo
-    repository.create(users)
+    repository.create(registro)
         .then((resp) => {
             if (resp.rows.length == 0) {
                 res.status(400).send({});
             }
             //si insert ok
-            users.Id = resp.rows[0].id
-            res.status(201).send(users);
+            registro.username = resp.rows[0].username
+            res.status(201).send(registro);
         })
         .catch((error) => {
             res.status(500).send('Not Found' + error.stack);
