@@ -11,5 +11,11 @@ repository.create = (registro) => {
   const context =  pool()
   return context.query('insert into registro (username,correo,contraseña) values ($1,$2,$3) RETURNING id',[registro.username,registro.correo, registro.contraseña])
 }
+repository.create = (tiquete) => {
+  const context =  pool()
+  return context.query('insert into tiquete (id,fechaEntrada,fechaSalida,numeroNinos,numeroAdultos,origen,vuelta) values ($1,$2,$3,$4,$5,$6,$7) RETURNING id',[tiquete.id,tiquete.fechaEntrada, tiquete.fechaSalida, tiquete.numeroNinos, tiquete.numeroAdultos, tiquete.origen, tiquete.vuelta])
+}
+
+
 
 module.exports = repository;
