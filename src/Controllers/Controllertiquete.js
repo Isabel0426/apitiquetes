@@ -21,3 +21,4 @@ tiquetec.create = (req, res) => {
             res.status(500).send('Not Found' + error.stack);
         })
 }
+module.exports = tiquetec
