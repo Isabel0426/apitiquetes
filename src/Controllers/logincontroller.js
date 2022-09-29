@@ -1,9 +1,9 @@
 const userControll = {};
 const login = require('../Models/login');
-const repository = require('../repositories/repository');
+const repository = require('../repositories/loginrepository');
 
 
-userControll.getlogin = (req, res) => {
+userControll.getAll = (req, res) => {
     const user = req.body.username
     const pass = req.body.contraseña
     repository.getlogin(user, pass)

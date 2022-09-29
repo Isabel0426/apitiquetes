@@ -1,6 +1,6 @@
 const tiquetec = {};
 const tiquete = require ('../Models/tiquete');
-const repository = require('../repositories/repository');
+const repository = require('../repositories/comprarepository');
 
 tiquetec.create = (req, res) => {
     //capturar body request
