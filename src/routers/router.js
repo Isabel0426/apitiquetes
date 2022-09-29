@@ -7,10 +7,10 @@ const  userRegistro =require('../Controllers/controller2')
 
 
 //login
-router.get(apiRoute+'/login',userControll.getlogin)
+router.get(apiRoute+'/login',userControll.get)
 
 //registro
-router.post(apiRoute+'/registro',userRegistro.create)
+router.post(apiRoute+'/registron',userRegistro.create)
 
 //compra tiquete
 router.post(apiRoute+'/tiquete',tiquetec.create)
