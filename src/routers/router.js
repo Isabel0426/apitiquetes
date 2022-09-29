@@ -7,7 +7,7 @@ const  userRegistro =require('../Controllers/controller2')
 
 
 //login
-router.get(apiRoute+'/login',userControll.get)
+router.get(apiRoute+'/login',userControll.getlogin)
 
 //registro
 router.post(apiRoute+'/registron',userRegistro.create)

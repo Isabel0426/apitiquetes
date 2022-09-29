@@ -2,7 +2,7 @@
 const pool = require('./dbconnection')
 const repository = {}
 //de logueo
-repository.getlogin = (username, contraseña) => {
+repository.get = (username, contraseña) => {
   const context =  pool()
   return context.query('select * from login where username=$1 and contraseña=$2',[username,contraseña])
 }

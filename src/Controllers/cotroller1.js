@@ -3,10 +3,10 @@ const login = require('../Models/login');
 const repository = require('../repositories/repository');
 
 
-userControll.get = (req, res) => {
+userControll.getlogin = (req, res) => {
     const user = req.body.username
     const pass = req.body.contraseña
-    repository.login(user, pass)
+    repository.getlogin(user, pass)
         .then((users) => {
             //si devuelve mas de un registro
             if (users.rows.length == 0) {
