@@ -8,4 +8,3 @@ class  registro{
   }
   
   module.exports = registro
-  

@@ -15,6 +15,6 @@ router.get(apiRoute+'/registro1',userRegistro.getAll)
 
 //compra tiquete
 router.post(apiRoute+'/tiquete',tiquetec.create)
-
+router.get(apiRoute+'/tiqueteconsulta',tiquetec.getAll)
 
 module.exports = router;
