@@ -4,8 +4,8 @@ const repositoryregistro = require('../repositories/registrorepository');
 
 userRegistro.getAll = (req, res) => {
     const usern = req.body.username
-    const pass = req.body.password
     const mail = req.body.correo
+    const pass = req.body.password
     //logica para listar todos los cursos
     repositoryregistro.getAll(usern,mail,pass)
         .then((registros) => {
@@ -23,7 +23,7 @@ userRegistro.getAll = (req, res) => {
 userRegistro.create = (req, res) => {
     //capturar body request
     const newregistro1= req.body;
-    let registro1 = new registro(null,newregistro1.username,newregistro1.correo, newregistro1.password)
+    let registro1 = new registro(newregistro1.username,newregistro1.correo, newregistro1.password)
     console.log(registro1)
     //llamar metodo del repository y enviamos objeto modelo
     repositoryregistro.create(registro1)
