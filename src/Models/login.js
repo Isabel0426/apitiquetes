@@ -1,8 +1,8 @@
 //SE TRAE LA TABLA DE LOGIN Y SE EXPORTA PARA USAR EN OTRO LUGAR 
 class  login{
-    constructor(username,contraseña){
+    constructor(username,password){
       this.username = username;
-      this.contraseña = contraseña;
+      this.password = password;
     }
   }
   

@@ -8,7 +8,7 @@ registrorepository.getAll = () => {
 
 registrorepository.create = (registro) => {
     const context =  pool()
-    return context.query('insert into registro (username,correo,contraseña) values ($1,$2,$3) RETURNING *',[registro.username,registro.correo,registro.contraseña])
+    return context.query('insert into registro (username,correo,password) values ($1,$2,$3) RETURNING *',[registro.username,registro.correo,registro.password])
   }
 
   module.exports = registrorepository;

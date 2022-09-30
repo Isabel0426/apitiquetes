@@ -5,7 +5,7 @@ const repository = require('../repositories/loginrepository');
 
 userControll.getAll = (req, res) => {
     const user = req.body.username
-    const pass = req.body.contraseña
+    const pass = req.body.password
     repository.getlogin(user, pass)
         .then((users) => {
             //si devuelve mas de un registro

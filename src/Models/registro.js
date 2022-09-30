@@ -1,9 +1,9 @@
 //SE TRAE LA TABLA DE REGISTRO Y SE EXPORTA PARA USAR EN OTRO LUGAR 
 class  registro{
-    constructor(username, correo, contraseña){
+    constructor(username, correo, password){
       this.username = username;
       this.correo = correo;
-      this.contraseña = contraseña;
+      this.password = password;
     }
   }
   

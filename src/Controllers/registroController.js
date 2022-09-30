@@ -4,7 +4,7 @@ const repositoryregistro = require('../repositories/registrorepository');
 
 userRegistro.getAll = (req, res) => {
     const usern = req.body.username
-    const pass = req.body.contraseña
+    const pass = req.body.password
     const mail = req.body.correo
     //logica para listar todos los cursos
     repositoryregistro.getAll(usern,mail,pass)
@@ -22,17 +22,18 @@ userRegistro.getAll = (req, res) => {
 }
 userRegistro.create = (req, res) => {
     //capturar body request
-    const newregistro= req.body;
-    let registro = new registro(null,newregistro.username,newregistro.correo, newregistro.contraseña)
+    const newregistro1= req.body;
+    let registro1 = new registro(null,newregistro1.username,newregistro1.correo, newregistro1.password)
+    console.log(registro1)
     //llamar metodo del repository y enviamos objeto modelo
-    repositoryregistro.create(registro)
+    repositoryregistro.create(registro1)
         .then((resp) => {
             if (resp.rows.length == 0) {
                 res.status(400).send({});
             }
             //si insert ok
             repositoryregistro.username = resp.rows[0].username
-            res.status(201).send(registro);
+            res.status(201).send(registro1);
         })
         .catch((error) => {
             res.status(500).send('Not Found' + error.stack);
