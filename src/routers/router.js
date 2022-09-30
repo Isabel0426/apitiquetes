@@ -11,7 +11,7 @@ router.get(apiRoute+'/login',userControll.getAll)
 
 //registro
 router.post(apiRoute+'/registro',userRegistro.create)
-router.get(apiRoute+'/registro',userRegistro.getAll)
+router.get(apiRoute+'/registro1',userRegistro.getAll)
 
 //compra tiquete
 router.post(apiRoute+'/tiquete',tiquetec.create)

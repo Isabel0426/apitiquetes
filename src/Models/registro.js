@@ -7,4 +7,5 @@ class  registro{
     }
   }
   
-  module.exports = registro;
+  module.exports = registro
+  

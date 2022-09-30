@@ -2,9 +2,6 @@ const userRegistro = {};
 const registro = require('../Models/registro');
 const repositoryregistro = require('../repositories/registrorepository');
 
-
-
-
 userRegistro.getAll = (req, res) => {
     const usern = req.body.username
     const pass = req.body.contraseña
@@ -23,9 +20,6 @@ userRegistro.getAll = (req, res) => {
             res.status(500).send(error.stack);
         })
 }
-
-
-
 userRegistro.create = (req, res) => {
     //capturar body request
     const newregistro= req.body;
